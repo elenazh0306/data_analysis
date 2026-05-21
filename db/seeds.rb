@@ -1,20 +1,6 @@
 require "json"
 require "rest-client"
 
-# # TODO: Write a seed to insert 10 posts in the database fetched from the Hacker News API.
-# filepath = 'https://hacker-news.firebaseio.com/v0/topstories.json'
-# serialized_posts = RestClient.get(filepath)
-# posts = JSON.parse(serialized_posts)
-
-
-# 10.times do |i|
-#   filepath = "https://hacker-news.firebaseio.com/v0/item/#{posts[i]}.json"
-#   serialized_post = RestClient.get(filepath)
-#   post = JSON.parse(serialized_post)
-#   Post.create(title: post[:title], url: post[:url], votes: post[:score])
-# end
-# require "json"
-# require "open-uri"
 
 # url = "https://data.ly.gov.tw/odw/openDatasetJson.action?id=370&selectTerm=all&page=1"
 # site_serialized = URI.parse(url).read

@@ -1,6 +1,6 @@
 class CreateBills < ActiveRecord::Migration[8.1]
   def change
-    create_table :posts do |t|
+    create_table :bills do |t|
       t.string :billName
       t.string :billProposer
       t.string :billCosignatory
