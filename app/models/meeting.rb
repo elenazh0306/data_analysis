@@ -6,6 +6,6 @@ class Meeting
     @committee = attributes[:committee]
     @meeting_name = attributes[:meeting_name]
     @content = attributes[:content]
-    @legislator = attributes[:legislator]
+    @legislator = attributes[:legislator] || nil
   end
 end
