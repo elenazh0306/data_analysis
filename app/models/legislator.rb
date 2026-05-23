@@ -1,5 +1,3 @@
-class Legislator
-  def initialize
-
-  end
+class Legislator < ActiveRecord::Base
+  has_many :meetings
 end
