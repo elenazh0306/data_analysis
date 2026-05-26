@@ -9,17 +9,16 @@ ActiveRecord::Base.establish_connection(
   database: "db/development.sqlite3"
 )
 
+require_relative './controllers/legislators_controller'
+require_relative 'router'
+require "csv"
 
 
-wang = Legislator.find_by(name: "王鴻薇")
-p wang.name
-puts "Plenary meetings"
-wang.plenary_meetings.each do |meeting|
-  p meeting.name
-end
-puts "Committee meetings"
-wang.committee_meetings.each do |meeting|
-  p meeting.committee
-  p meeting.name
+legislator_controller = LegislatorsController.new
 
-end
+
+
+router = Router.new(legislator_controller)
+
+# Start the app
+router.run
